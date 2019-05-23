@@ -1,0 +1,43 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+
+	char arr[7];
+	int i, j, temp;
+	
+    cout<<"Input numbers and letters:"<< "\n" ;
+    for (i = 0; i < 7; i++)
+    {
+        cin>>arr[i]; 
+    }
+
+    cout<<"\n\n" ;
+    cout<<"Reverse :"<< "\n\n";
+    
+
+	for (i = 0; i < 7; i++)
+	{
+		for (j = 0; j < 7 - i - 1; j++)
+			if (arr[j] > arr[j+1])
+			{
+				temp = arr[j];
+				arr[j]=arr[j+1];
+				arr[j+1]=temp;
+			}
+	}    
+
+	for (i = 0; i < 7; i++)
+		if (i<6)
+		{	cout<<arr[i]<<", ";
+		}
+		else
+		{cout<<arr[i];
+		}
+		
+		
+_getch();
+return 0;
+}
